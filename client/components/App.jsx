@@ -1,8 +1,14 @@
 import React from 'react'
+import api from '../api'
+import Login from './Login'
+import Pairing from './Pairing'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <Login />
+      <Pairing />
+    </>
   )
 }
 
