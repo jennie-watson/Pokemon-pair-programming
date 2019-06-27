@@ -7,7 +7,8 @@ export default class test extends Component {
     class: matai
   }
   componentDidMount () {
-    api.getChars()
+    // api.getChars()
+    api.getPokemon()
     console.log(matai)
   }
   render () {
