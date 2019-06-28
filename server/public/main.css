@@ -1,4 +1,64 @@
 body {
-  background-color: aquamarine;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Julee', cursive;
+  background-image: url(../images/pokemon.png);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.Title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 40pt;
+  display: inline-flex;
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+
+}
+
+.Intro {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+
+}
+
+.Sub-Title-Ctr {
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.Top-Row {
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+  
+.Middle-Row {
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+  display: inline-flexbox;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.Bottom-Row {
+  text-align: center;
+  text-shadow: #0000CD 2px 0 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
