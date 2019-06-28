@@ -47,6 +47,7 @@ export default class Pairing extends React.Component {
       <>
       <h1 className = "Header">Tandam!!!</h1>
         <div className = "container">
+          <div className = "content">
           <div  className = "row">
             <ul>
               {
@@ -62,6 +63,7 @@ export default class Pairing extends React.Component {
                 })
               }
             </ul>
+          </div>
           </div>
         </div>
       </>

@@ -15,36 +15,10 @@ body {
 
 }
 
-.Sub-Title-Ctr {
+.content {
   text-align: center;
+  font-size: 20pt;
   text-shadow: #0000CD 2px 0 10px;
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.Top-Row {
-  text-align: center;
-  text-shadow: #0000CD 2px 0 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-  
-.Middle-Row {
-  text-align: center;
-  text-shadow: #0000CD 2px 0 10px;
-  display: inline-flexbox;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.Bottom-Row {
-  text-align: center;
-  text-shadow: #0000CD 2px 0 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
