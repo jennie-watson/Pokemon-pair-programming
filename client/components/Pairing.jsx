@@ -1,27 +1,29 @@
 import React from 'react'
 
-import { getPokemon } from '../api'
-
-import { getChars } from '../api'
-
 import { matai } from './class'
+
+import api from '../api'
 
 export default class Pairing extends React.Component {
   state = {
-    name: ''
+    name: '',
+    pokemon: []
   }
 
   handleChange = (event) => {
     this.setState({ name: event.target.value })
   }
-
-  handleSubmit = () => {
-    getPokemon(this.state.name)
-      .then(result => {
+  componentDidMount () {
+    api.getPokemon()
+      .then(list => {
         this.setState({
-          result
+          pokemon: list
         })
       })
+  }
+
+  handleClick = () => {
+    this.setState({})
   }
 
   render = () => {
@@ -31,14 +33,14 @@ export default class Pairing extends React.Component {
           <ul>
             {
               matai.map(student => {
-                return <li>{student}</li>
+                return <li key={student}>{student}</li>
               })
             }
           </ul>
           <ul>
             {
-              getPokemon.map(pokemon => {
-                return <li>{pokemon}</li>
+              this.state.pokemon.map(pokemon => {
+                return <li key={pokemon.name}>{ pokemon.name }</li>
               })
             }
           </ul>
