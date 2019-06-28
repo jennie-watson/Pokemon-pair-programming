@@ -38,8 +38,11 @@ export default class Pairing extends React.Component {
       })
   }
 
-  handleClick = () => {
-    this.setState({})
+  handleRandomise = () => {
+    this.setState({
+      pokemon: this.shuffle(this.state.pokemon),
+      class: this.shuffle(this.state.class)
+    })
   }
 
   render = () => {
@@ -60,6 +63,9 @@ export default class Pairing extends React.Component {
               })
             }
           </ul>
+          <div>
+            <button onClick={this.handleRandomise}>Randomise!</button>
+          </div>
         </div>
       </>
     )
