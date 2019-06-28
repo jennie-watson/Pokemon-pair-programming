@@ -1,14 +1,13 @@
 import React from 'react'
 
-class Login extends React.Component {
+export default class Login extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <h1>App Name</h1>
+        <h1>Tander</h1>
         <form>
-          <input type="text" placeholder="Name" />
-
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Name" /><br />
+          <input type="password" placeholder="Password" /><br />
           <button id='matchMe' onClick={this.handleClick}>MATCH ME</button>
         </form>
       </React.Fragment>

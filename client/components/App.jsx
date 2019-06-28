@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from './Login'
-import Test from './test'
+import pokeUrl from '../api'
 import Pairing from './Pairing'
 
 const App = () => {
