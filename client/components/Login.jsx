@@ -30,7 +30,7 @@ export default class Login extends React.Component {
   }
   render () {
     if (this.state.authenticated) {
-      return <Redirect to='/home'/>
+      return <Redirect to='/tandem'/>
     }
     return (
       <React.Fragment>
