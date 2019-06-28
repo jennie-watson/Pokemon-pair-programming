@@ -6,7 +6,8 @@ export default class Login extends React.Component {
   state = {
     name: '',
     password: '',
-    authenticated: false
+    authenticated: false,
+    incorrect: false
   }
 
   handleInput = e => {
@@ -22,10 +23,14 @@ export default class Login extends React.Component {
     if (authName && this.state.password === password) {
       console.log('authenticated user')
       this.setState({
-        authenticated: true
+        authenticated: true,
+        incorrect: false
       })
     } else {
       console.log('incorrect details')
+      this.setState({
+        incorrect: true
+      })
     }
   }
   render () {
@@ -34,7 +39,10 @@ export default class Login extends React.Component {
     }
     return (
       <React.Fragment>
-        <h1>App Name</h1>
+        <h1>level up</h1>
+        {
+          this.state.incorrect && <div style={{ color: 'red' }}><h1 >incorrect details</h1> <p>please try again</p></div>
+        }
         <form onSubmit={this.handleClick}>
           <input type="text" name="name" placeholder="Name" onChange={this.handleInput} value={this.state.name}/>
 
