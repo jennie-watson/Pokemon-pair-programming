@@ -40,16 +40,19 @@ export default class Login extends React.Component {
     }
     return (
       <React.Fragment>
-        <h1>tandar</h1>
+        <h1 className = "Header" >tandar</h1>
         {
           this.state.incorrect && <div style={{ color: 'red' }}><h1 >incorrect details</h1> <p>please try again</p></div>
         }
-        <form onSubmit={this.handleClick}>
-          <input type="text" name="name" placeholder="Name" onChange={this.handleInput} value={this.state.name}/>
-
-          <input type="password" name="password" placeholder="Password" onChange={this.handleInput} value={this.state.password}/>
-          <button id='matchMe'>Login</button>
-        </form>
+        <div className = "row">
+          <form onSubmit={this.handleClick}>
+            <input className = "col-md-12" type="text" name="name" placeholder="Name" onChange={this.handleInput} value={this.state.name}/>
+            <p></p>
+            <input className = "col-md-12" type="password" name="password" placeholder="Password" onChange={this.handleInput} value={this.state.password}/>
+            <p></p>
+            <button id='matchMe'>Login</button>
+          </form>
+        </div>
       </React.Fragment>
     )
   }
