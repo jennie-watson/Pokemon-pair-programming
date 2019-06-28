@@ -26,21 +26,24 @@ export default class Pairing extends React.Component {
 
   render = () => {
     return (
-        <>
-          {/* <div>
-            Choose your partner, choose your destiny...
-            <br />
-            <input type="text" value={this.state.name} onChange={this.handleChange} />
-            <button onClick={this.handleSubmit}>Submit!</button>
-          </div>
-
-          {this.state.result && (
-            <div>
-              <h2>Your programming partner is:</h2>
-              <p>this.state.result</p>
-            </div> */}
-          )}
-        </>
+      <>
+        <div>
+          <ul>
+            {
+              matai.map(student => {
+                return <li>{student}</li>
+              })
+            }
+          </ul>
+          <ul>
+            {
+              getPokemon.map(pokemon => {
+                return <li>{pokemon}</li>
+              })
+            }
+          </ul>
+        </div>
+      </>
     )
   }
 }
