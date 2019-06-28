@@ -48,24 +48,25 @@ export default class Pairing extends React.Component {
   render = () => {
     return (
       <>
-        <div>
-          <ul>
-            {
-              matai.map(student => {
-                return <li key={student}>{student}</li>
-              })
-            }
-          </ul>
-          <ul>
-            {
-              this.state.pokemon.map(pokemon => {
-                return <li key={pokemon.name}>{ pokemon.name }</li>
-              })
-            }
-          </ul>
-          <div>
-            <button onClick={this.handleRandomise}>Randomise!</button>
+      <h1 className = "Header">Tandam!!!</h1>
+        <div className = "container">
+          <div  className = "row">
+            <ul>
+              {
+                matai.map(student => {
+                  return <li className = "col-md-6" key={student}>{student}</li>
+                })
+              }
+            </ul>
+            <ul>
+              {
+                this.state.pokemon.map(pokemon => {
+                  return <li className = "col-md-6" key={pokemon.name}>{ pokemon.name }</li>
+                })
+              }
+            </ul>
           </div>
+          <button onClick={this.handleRandomise}>Randomise!</button>
         </div>
       </>
     )
