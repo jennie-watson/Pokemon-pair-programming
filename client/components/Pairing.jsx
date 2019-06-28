@@ -15,7 +15,7 @@ export default class Pairing extends React.Component {
     this.setState({ name: event.target.value })
   }
 
-  shuffle (a) {
+  shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]]
@@ -23,7 +23,7 @@ export default class Pairing extends React.Component {
     return a
   }
 
-  componentDidMount () {
+  componentDidMount() {
     api.getPokemon()
       .then(list => {
         this.shuffle(list)
@@ -38,35 +38,42 @@ export default class Pairing extends React.Component {
       })
   }
 
-  handleClick = () => {
-    this.setState({})
+  handleRandomise = () => {
+    this.setState({
+      pokemon: this.shuffle(this.state.pokemon),
+      class: this.shuffle(this.state.class)
+    })
   }
 
   render = () => {
     return (
       <>
-      <h1 className = "Header">Tandam!!!</h1>
-        <div className = "container">
-          <div className = "content">
-          <div  className = "row">
-            <ul>
-              {
-                matai.map(student => {
-                  return <li className = "col-md-6" key={student}>{student}</li>
-                })
-              }
-            </ul>
-            <ul>
-              {
-                this.state.pokemon.map(pokemon => {
-                  return <li className = "col-md-6" key={pokemon.name}>{ pokemon.name }</li>
-                })
-              }
-            </ul>
-          </div>
+      <div className="container">
+        <h1 className="Header">Tandam!!!</h1>
+        <p>
+        <button className= "button" onClick={this.handleRandomise}>Randomise!</button>
+        </p>
+          <div className="content">
+            <div className="row">
+            
+              <ul>
+                {
+                  matai.map(student => {
+                    return <li style={{listStyleType: 'none'}} className="col-md-6" key={student}>{student}</li>
+                  })
+                }
+              </ul>
+              <ul>
+                {
+                  this.state.pokemon.map(pokemon => {
+                    return <li style={{listStyleType: 'none'}} className="col-md-6" key={pokemon.name}>{pokemon.name}</li>
+                  })
+                }
+              </ul>
+            </div>
           </div>
         </div>
       </>
-    )
-  }
-}
+        )
+      }
+    }

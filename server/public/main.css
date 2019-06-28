@@ -22,3 +22,8 @@ body {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+.button {
+  margin-left: 100pt;
+  display: inline-flex;
+}
