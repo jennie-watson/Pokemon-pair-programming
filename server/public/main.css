@@ -5,25 +5,11 @@ body {
   background-size: cover;
 }
 
-.Title {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-right: 20px;
-  padding-left: 20px;
-  font-size: 40pt;
+.Header {
+  margin: 20px;
+  padding: 20px;
+  font-size: 60pt;
   display: inline-flex;
-  text-align: center;
-  text-shadow: #0000CD 2px 0 10px;
-
-}
-
-.Intro {
-  padding-top: 20px;
-  padding-bottom: 35px;
-  padding-right: 20px;
-  padding-left: 20px;
   text-align: center;
   text-shadow: #0000CD 2px 0 10px;
 

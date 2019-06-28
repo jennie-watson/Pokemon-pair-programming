@@ -8,12 +8,14 @@ class App extends React.Component {
   render () {
     return (
       <>
-        <Route path='/' exact render={() =>
-          <Login />
-        }/>
-        <Route path='/tandem' render={() =>
-          <Pairing />
-        }/>
+        <div className = "container">
+          <Route path='/' exact render={() =>
+            <Login />
+          }/>
+          <Route path='/tandem' render={() =>
+            <Pairing />
+          }/>
+        </div>
       </>
     )
   }
