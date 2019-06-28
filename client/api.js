@@ -14,12 +14,13 @@ function getChars () {
 }
 
 function getPokemon () {
-  console.log('api pokemon')
+  // console.log('api pokemon')
 
   return request
     .get(pokeUrl)
     .then(res => {
-      console.log(res)
+      console.log('api: ', res.body.results)
+      return res.body.results
     })
 }
 
