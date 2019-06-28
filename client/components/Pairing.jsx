@@ -7,17 +7,33 @@ import api from '../api'
 export default class Pairing extends React.Component {
   state = {
     name: '',
-    pokemon: []
+    pokemon: [],
+    class: []
   }
 
   handleChange = (event) => {
     this.setState({ name: event.target.value })
   }
+
+  shuffle (a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+
   componentDidMount () {
     api.getPokemon()
       .then(list => {
+        this.shuffle(list)
+
+        // shuffle class arr
+        const ranMatai = this.shuffle(matai)
+
         this.setState({
-          pokemon: list
+          pokemon: list,
+          class: ranMatai
         })
       })
   }

@@ -18,8 +18,9 @@ export default class Login extends React.Component {
 
   handleClick = e => {
     e.preventDefault()
-    // check credentials
+
     const authName = matai.find(name => name === this.state.name)
+    
     if (authName && this.state.password === password) {
       console.log('authenticated user')
       this.setState({
