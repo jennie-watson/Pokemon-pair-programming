@@ -40,7 +40,7 @@ export default class Login extends React.Component {
     }
     return (
       <React.Fragment>
-        <h1 className = "Header" >tandar</h1>
+        <h1 className = "Header" >Tandar</h1>
         {
           this.state.incorrect && <div style={{ color: 'red' }}><h1 >incorrect details</h1> <p>please try again</p></div>
         }
