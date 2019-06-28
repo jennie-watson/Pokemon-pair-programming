@@ -9,9 +9,9 @@ export default class Pairing extends React.Component {
     this.setState({})
   }
 
-  render() {
+  render () {
     return (
-      
+      <h1>hi</h1>
     )
   }
 }
